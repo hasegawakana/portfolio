@@ -1,2 +1,3 @@
 # portfolio-website
-ポートフォリオWebサイトです。
+
+長谷川加奈のポートフォリオWebサイトです。
