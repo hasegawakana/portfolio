@@ -555,3 +555,15 @@
     transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
     background-color: #fff;
 }
+
+/* width=device-width
+--------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  
+    .drawer--right.drawer-open .drawer-nav, .drawer--right .drawer-hamburger, .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
+    right: 5px;
+}
+  .drawer-hamburger {
+    margin-top: 5px;
+}
+}

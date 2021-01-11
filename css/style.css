@@ -109,7 +109,7 @@ article {
 
 /* section
 --------------------------------------------------*/
-section {
+section:not(:last-child) {
   margin-bottom: 100px;
 }
 
@@ -154,6 +154,7 @@ h2 span {
   background: #efefef;
   box-shadow: 0 0 8px #ccc;
   line-height: 2em;
+  text-align: justify;
 }
 
 /* works-wrap
@@ -361,6 +362,10 @@ i.icon-size {
   left: 2.2em;
 }
 
+.skill-text {
+  text-align: justify;
+}
+
 .skill-text h3 {
   font-size: 1em;
   text-align: center;
@@ -370,10 +375,15 @@ i.icon-size {
   word-wrap: break-word;
 }
 
+.skill-text p span {
+  padding-bottom: 30px;
+}
+
 .skill-text p {
   font-size: 0.8em;
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
+
 
 /* footer
 --------------------------------------------------*/
@@ -381,6 +391,7 @@ footer p {
   text-align: center;
   font-size: 1.2em;
   letter-spacing: 0.08em;
+  padding-bottom: 5%;
 }
 
 /* width=device-width
@@ -405,6 +416,7 @@ footer p {
     text-align: center;
     width: 100%;
     margin: 0;
+    top: 35%;
   }
 
   h2 {
@@ -425,14 +437,14 @@ footer p {
   }
 
   .about-img {
-    margin: 0 20px;
+    margin: 20px;
     width: auto;
   }
 
   .about-text {
     padding: 10px 20px;
-    text-align: justify;
-    display: block;
+    font-size: 14px;
+    line-height: 24px;;
   }
 
   .works-wrap .flex,
@@ -455,31 +467,30 @@ footer p {
   .skill-item {
     display: flex;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     padding: 10px 0 10px 20px;
   }
 
   .language:before {
-    top: -10px;
-    left: 0;
+    top: 5px;
+    left: 5px;
   }
 
   .tool:before {
-    top: -10px;
-    left: 0;
+    top: 5px;
+    left: 5px;
   }
 
   .office:before {
-    top: -10px;
-    left: 0;
+    top: 5px;
+    left: 5px;
   }
 
   .other:before {
-    top: -10px;
-    left: 0;
+    top: 5px;
+    left: 5px;
   }
-
-
+  
   .skill-text p {
     margin: 0 20px;
   }
