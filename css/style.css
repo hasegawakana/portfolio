@@ -1,15 +1,18 @@
 @charset="utf-8";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Playfair Display', serif;
 }
+
 /* wrapper
 --------------------------------------------------*/
 .wrapper {
   width: 90%;
-  /*pcの場合は90％が見やすい*/
-   max-width: 1000px;
-  /*max幅は任意で*/
+  max-width: 1200px;
   margin: 0 auto;
   letter-spacing: 0.08em;
 }
@@ -23,21 +26,47 @@ header {
 .name {
   width: 50%;
   float: left;
+}
+
+.name a {
+  color: #000;
+  font-size: 2em;
   line-height: 90px;
+  font-weight: bold;
 }
 
 nav ul {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  float: right;
+  line-height: 90px;
+}
+
+nav ul li {
+  margin-left: 10%;
 }
 
 nav ul li a {
-  display: block;
+  font-size: 1em;
   color: #000;
-  line-height: 90px;
+  padding: 10px;
+  position: relative;
+}
 
+nav ul a::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #04ac0a;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+
+nav ul a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left top;
 }
 
 /* top-wrap
@@ -51,18 +80,25 @@ h1 {
   position: absolute;
   top: 50%;
   left: 0;
+  margin: 0 1em;
   color: #d1d1d1;
 }
 
-.top-wrap p {
+h1 span {
+  color: #000;
+}
+
+.top-img {
   float: right;
   width: 80%;
+  height: 400px;
+  margin-right: 2em;
 }
 
-.top-wrap p img {
+.top-img img {
   width: 100%;
+  height: 100%;
 }
-
 
 /* article
 --------------------------------------------------*/
@@ -78,129 +114,120 @@ section {
 }
 
 h2 {
+  font-size: 2em;
   border-bottom: 2px solid #d1d1d1;
   margin-bottom: 2em;
   font-weight: normal;
 }
 
 h2 span {
-  font-size: 0.6em;
+  font-size: 0.8em;
   margin-left: 2em;
 }
+
 /* about-wrap
 --------------------------------------------------*/
-.about-wrap {
-/*  background: rgba(255, 255, 0, 0.14);*/
-}
-
 .about-wrap .flex {
   display: flex;
   flex-wrap: nowrap;
-/*  justify-content: space-between;*/
 }
 
 .about-img {
   width: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  background: pink;
 }
 
 .about-img img {
-  width: 100%;
+  width: 50%;
   height: auto;
+  box-shadow: 0 0 8px #ccc;
 }
 
 .about-text {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  justify-content: center;
-  align-content: center;
   align-items: center;
-  padding: 3em;
+  padding: 2.5em;
   background: #efefef;
+  box-shadow: 0 0 8px #ccc;
   line-height: 2em;
 }
 
 /* works-wrap
 --------------------------------------------------*/
-.works-wrap {
-/*  background: rgba(255, 0, 0, 0.14);*/
-}
-
 .works-wrap .flex {
   display: flex;
   flex-wrap: wrap;
+  align-content: stretch;
   justify-content: space-between;
-  align-items: stretch;
+  width: 100%;
+}
+
+.works-wrap .flex::after {
+  display: block;
+  content:"";
+  width: 30%;
 }
 
 .works-item {
-  width: 32%;
-  margin-bottom: 2em;
-  border: 1px solid #ccc;
+  width: 28%;
+  margin: 1%;
+  height: 100%;
+  padding: 2%;
   box-sizing: border-box;
-  padding: 1em;
-  position: relative;
+  box-shadow: 0 0 4px #ccc;
   overflow: hidden;
   border-radius: 3px;
+  position: relative;
 }
 
-.works-item img{
+.worls-item:last-child{
+  margin-left: auto;
+}
+
+.works-img {
+  width: auto;
+  height: 100%;
+  margin-bottom: 5%;
+}
+
+.works-img img {
   width: 100%;
   height: auto;
-/*  vertical-align: bottom;*/
-  opacity: 1;
-  transition: opacity 0.35s;
 }
 
-.works-item * {
-  box-sizing: border-box;
-/*  transition: all 0.6s ease;*/
+.works-wrap ul {
+  font-size: 0.9em;
+  height: 70px;
 }
 
 .works-text {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-/*  padding: 5em;*/
-  font-size: 0.8em;
+  height: 50%;
+  padding-top: 10%;
+  font-size: 1em;
   text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
 }
 
-.works-item h3,
-.works-item p {
-/*
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  left: 0;
-*/
+.works-text h3,
+.works-text p {
   opacity: 0;
 }
 
-.works-item h3 {
-/*  padding: 0 30px;*/
-/*  display: inline-block;*/
-/*  font-weight: 400;*/
-/*  bottom: 50%;*/
+.works-text h3 {
+  font-size: 0.9em;
   font-weight: normal;
   padding-bottom: 1em;
-  transform: translate3d(0%, -100%, 0);
-}
-
-.works-item p {
-/*  top: 50%;*/
-/*  padding: 0 50px;*/
-  font-size: 1em;
-/*  transform: translate3d(0%, 100%, 0);*/
+/*  transform: translate3d(0%, -100%, 0);*/
 }
 
 .works-item a {
@@ -212,14 +239,15 @@ h2 span {
 }
 
 .works-item:hover img {
-  opacity: 0.2;
-  filter: grayscale(50%);
+  opacity: 0.3;
+  filter: grayscale(30%);
 }
 
 .works-item:hover .works-text h3,
 .works-item:hover .works-text p {
   transform: translate3d(0%, 0%, 0);
-  transition: .4s;
+  transition: .8s;
+  font-weight: bold;
 }
 
 .works-item:hover .works-text h3 {
@@ -229,6 +257,35 @@ h2 span {
 .works-item:hover .works-text p {
   opacity: 0.8;
 }
+
+/* graphic-wrap
+--------------------------------------------------*/
+.graphic-wrap .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.graphic-item {
+  width: 32%;
+  margin-bottom: 2em;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px #ccc;
+  padding: 1em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.graphic-item:last-child {
+  width: 50%;
+}
+
+.graphic-item img {
+  width: 100%;
+  height: auto;
+}
+
 
 
 /* skill-wrap
@@ -241,65 +298,194 @@ h2 span {
 }
 
 .skill-item {
-/*  background: pink;*/
   width: 22%;
   margin-bottom: 2em;
-  border: 1px solid #ccc;
   box-sizing: border-box;
-  padding: 1em 2em;
-  text-align: center;
+  box-shadow: 0 0 4px #ccc;
+  padding: 1em 1.5em;
   border-radius: 3px;
-  line-height: 1.2em;
   position: relative;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+i.icon-size {
+  font-size: 5em;
 }
 
 .language:before {
   content: "言語";
+  color: #000;
   font-size: 0.6em;
   padding: 0 1em;
-  background: pink;
+  background: rgb(255, 255, 44);
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 1em;
+  left: 2.2em;
 }
 
 .tool:before {
-  content: "ツール";
+  content: "Adobe";
+  color: #fff;
   font-size: 0.6em;
   padding: 0 1em;
-  background: pink;
+  background: #ff1b43;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 1em;
+  left: 2.2em;
 }
 
-.skill-item h3 {
+.office:before {
+  content: "Office";
+  color: #fff;
+  font-size: 0.6em;
+  padding: 0 1em;
+  background: #4a3bff;
+  position: absolute;
+  top: 1em;
+  left: 2.2em;
+}
+
+.other:before {
+  content: "その他";
+  font-size: 0.6em;
+  padding: 0 1em;
+  border: 1px solid #000;
+  position: absolute;
+  top: 1em;
+  left: 2.2em;
+}
+
+.skill-text h3 {
   font-size: 1em;
+  text-align: center;
   margin-bottom: 1em;
   font-weight: normal;
+  width: 100%;
+  word-wrap: break-word;
 }
 
-.skill-item p {
+.skill-text p {
   font-size: 0.8em;
-}
-
-.icon {
-/*  background: tomato;*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-/*  align-items: stretch;*/
-  height: 100px;
+  line-height: 1.2em;
 }
 
 /* footer
 --------------------------------------------------*/
 footer p {
   text-align: center;
-  color: #ccc;
   font-size: 1.2em;
   letter-spacing: 0.08em;
-  
 }
 
+/* width=device-width
+--------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  
+  .name {
+    width: auto;
+    float: none;
+  }
 
+  .name a {
+    font-size: 18px;
+    line-height: 90px;
+  }
+  
+  .top-wrap {
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  article {
+    margin: 0 15px;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  .about-wrap .flex {
+    display: block;
+  }
+
+  .about-img {
+    margin: 0 20px;
+    width: auto;
+  }
+
+  .about-text {
+    padding: 10px 20px;
+    text-align: justify;
+    display: block;
+  }
+
+  .works-wrap .flex,
+  .graphic-wrap .flex {
+    display: block;
+  }
+
+  .works-item,
+  .graphic-item {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 1em;
+  }
+
+  .graphic-item:last-child {
+    width: auto;
+  }
+
+  .skill-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 10px 0 10px 20px;
+  }
+
+  .language:before {
+    top: -10px;
+    left: 0;
+  }
+
+  .tool:before {
+    top: -10px;
+    left: 0;
+  }
+
+  .office:before {
+    top: -10px;
+    left: 0;
+  }
+
+  .other:before {
+    top: -10px;
+    left: 0;
+  }
+
+
+  .skill-text p {
+    margin: 0 20px;
+  }
+
+  i.icon-size {
+    font-size: 62px;
+  }
+
+}

@@ -5,54 +5,64 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="keywords" content="#">
   <title>Kana Hasegawa｜portfolio</title>
-  <meta name="description" content="#">
+  <meta name="description" content="はせがわかなのポートフォリオサイトです。">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="images/#">
   <!--↑スマホ用お気に入りページ用のアイコン-->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/drawer.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e514ec5d29.js" crossorigin="anonymous"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="js/iscroll.js"></script>
+  <script src="js/drawer.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
 </head>
-
-<body>
+<body class="drawer drawer--right">
+  <button type="button" class="drawer-toggle drawer-hamburger">
+    <span class="sr-only">toggle navigation</span>
+    <span class="drawer-hamburger-icon"></span>
+  </button>
   <div class="wrapper clearfix">
     <header>
       <div class="name">
-        <p><a href="#">Kana Hasegawa</a></p>
+        <p><a href="#top">Kana Hasegawa</a></p>
       </div><!--/name-->
-      <nav>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Skill</a></li>
-          <li><a href="#">GitHub<i class="fas fa-external-link-alt"></i></a></li>
+      <nav class="drawer-nav">
+        <ul class="drawer-menu">
+          <li><a href="#sec1">About</a></li>
+          <li><a href="#sec2">Works</a></li>
+          <li><a href="#sec3">Skill</a></li>
+          <li class="github"><a href="https://github.com/hasegawakana" target="_blank">GitHub<i class="fas fa-external-link-alt"></i></a></li>
         </ul>
       </nav>
     </header>
     <div class="top-wrap clearfix">
-      <h1>PORTFOLIO WEBSITE<br>Kana Hasegawa</h1>
-      <p><img src="images/top-portfolio.png" width="925" height="370" alt="#"></p>
+      <h1>PORTFOLIO WEBSITE<br><span>Kana Hasegawa</span></h1>
+      <p class="top-img"><img src="images/top-portfolio.png" width="925" height="570" alt="#"></p>
     </div><!--/top-wrap-->
     <article>
-    <section class="about-wrap">
+    <section class="about-wrap" id="sec1">
       <h2>About<span>自己紹介</span></h2>
       <div class="flex">
-        <p class="about-img"><img src="images/my-photo.png" width="387" height="282" alt="#"></p>
-        <p class="about-text">1997年 8月 5日生まれ。埼玉県秩父市で育ち、現在は埼玉県朝霞市に住んでいます。高校ではフードデザイン科を専攻し卒業と同時に調理師免許を取得しました。趣味は音楽を聴くことです。邦ロックが好きです！<br>2020.8月〜2021.1月まで職業訓練校（Webデザイナー・ディレクター・マーケティング養成コース）を受講しております。コーディングをしている時間が好きです。フロントエンドエンジニアになることを目標に現在はjQuery、JavaScriptをメインに勉強しています。</p>
+        <p class="about-img"><img src="images/my-photo.jpg" width="498" height="593" alt="はせがわかなの写真です"></p>
+        <p class="about-text">埼玉県朝霞市在住の現在23歳です。高校ではフードデザイン科を専攻し卒業と同時に調理師免許を取得しました。趣味は美味しいものを食べることと、音楽を聴くこと（邦ロックが好きです！）です。<br>2020.8月〜2021.1月まで職業訓練校（Webデザイナー・ディレクター・マーケティング養成科）を受講しております。コーディングが好きで、フロントエンドエンジニアになることを目標に現在はjQuery、JavaScriptをメインに勉強しています。</p>
       </div><!--/flex-->
     </section><!--/about-wrap-->
-      <section class="works-wrap">
-        <h2>Works<span>制作したもの</span></h2>
+      <section class="works-wrap" id="sec2">
+        <h2>Web<span>制作したもの</span></h2>
           <div class="flex">
-            
-       
-            
             <div class="works-item">
-              <img src="images/works-magicom.png" alt="#">
+              <p class="works-img">
+                <img src="images/works-magicom.png" width="324" height="237" alt="架空革小物店のサイトmagicom">
+              </p>
               <div class="works-text">
                 <h3>架空革小物店のサイト<br>magicom</h3>
                 <p>サイトを見る<i class="fas fa-external-link-alt"></i></p>
@@ -60,13 +70,13 @@
               <a href="https://adjustacademy.com/d2008/d200816-850134/hasegawa/magicom/" target="_blank"></a>
               <ul>
                 <li>制作期間：１か月</li>
-                <li>使用言語：HTML、CSS、jQuery</li>
+                <li>スキル：HTML、CSS、JavaScript（jQuery）</li>
               </ul>
             </div><!--/works-item-->
-            
-            
+
+
             <div class="works-item">
-              <img src="images/works-sd.png" alt="#">
+              <p class="works-img"><img src="images/works-sd.png" width="338" height="237" alt="架空サンドイッチ店のサイトSandwich Day"></p>
               <div class="works-text">
                 <h3>架空サンドイッチ店のサイト<br>Sandwich Day</h3>
                 <p>サイトを見る<i class="fas fa-external-link-alt"></i></p>
@@ -74,107 +84,206 @@
               <a href="https://adjustacademy.com/d2008/d200816-850134/hasegawa/sandwichday/index.html" target="_blank"></a>
               <ul>
                 <li>制作期間：2か月</li>
-                <li>使用言語：HTML、CSS、jQuery</li>
+                <li>スキル：HTML、CSS、JavaScript（jQuery）</li>
               </ul>
             </div><!--/works-item-->
-          
+
             <div class="works-item">
-              <img src="images/works-pizzamax.png" alt="#">
+              <p class="works-img"><img src="images/works-pizzamax.png" width="338" height="237" alt="架空ピザ店のサイト（トップページのみ）Pizza max!"></p>
               <div class="works-text">
                 <h3>架空ピザ店のサイト<br>（トップページのみ）<br>Pizza max!</h3>
                 <p>サイトを見る<i class="fas fa-external-link-alt"></i></p>
               </div><!--/works-text-->
-              <a href="https://adjustacademy.com/d2008/d200816-850134/hasegawa/magicom/" target="_blank"></a>
+              <a href="https://adjustacademy.com/d2008/d200816-850134/hasegawa/pizzamax/" target="_blank"></a>
               <ul>
                 <li>制作期間：１日</li>
-                <li>使用言語：HTML、CSS、jQuery</li>
+                <li>スキル：HTML、CSS、JavaScript（jQuery）</li>
+              </ul>
+            </div><!--/works-item-->
+            
+            <div class="works-item">
+              <p class="works-img"><img src="images/works-js.png" width="338" height="237" alt="JavaScript（jQuery）を使ったアニメーション"></p>
+              <div class="works-text">
+                <h3>JavaScript（jQuery）を使った<br>アニメーション</h3>
+                <p>サイトを見る<i class="fas fa-external-link-alt"></i></p>
+              </div><!--/works-text-->
+              <a href="https://adjustacademy.com/d2008/d200816-850134/hasegawa/animation/" target="_blank"></a>
+              <ul>
+                <li>制作期間：2日</li>
+                <li>スキル：HTML、CSS、JavaScript（jQuery）</li>
+              </ul>
+            </div><!--/works-item-->
+            
+            <div class="works-item">
+              <p class="works-img"><img src="images/works-php.png" width="338" height="237" alt="PHPを使ったドリンクアドバイザーゲームです。"></p>
+              <div class="works-text">
+                <h3>PHPを使った<br>ドリンクアドバイザーゲーム</h3>
+                <p>サイトを見る<i class="fas fa-external-link-alt"></i></p>
+              </div><!--/works-text-->
+              <a href="https://adjustacademy.com/d2008/d200816-850134/hasegawa/drink/" target="_blank"></a>
+              <ul>
+                <li>制作期間：2日</li>
+                <li>スキル：HTML、CSS、PHP</li>
               </ul>
             </div><!--/works-item-->
 
           </div><!--/flex-->
-        
       </section><!--/works-wrap-->
-      <section class="skill-wrap">
+      
+      <section class="graphic-wrap">
+        <h2>Graphic Design<span>制作したもの</span></h2>
+          <div class="flex">
+            <div class="graphic-item">
+              <img src="images/mr_1.jpg" width="300" height="250" alt="ミディアムレクタングル入浴剤バナーＡ案">
+              <ul>
+                <li>入浴剤バナーＡ案</li>
+                <li>ミディアムレクタングル 300×250px</li>
+                <li>作業内容：撮影、デザイン</li>
+                <li>制作期間：5時間</li>
+                <li>スキル：Photoshop</li>
+              </ul>
+            </div><!--/graphic-item-->
+            
+            <div class="graphic-item">
+              <img src="images/mr_2.jpg" width="300" height="250" alt="ミディアムレクタングル入浴剤バナーB案">
+              <ul>
+                <li>入浴剤バナーB案</li>
+                <li>ミディアムレクタングル 300×250px</li>
+                <li>作業内容：撮影、デザイン</li>
+                <li>制作期間：5時間</li>
+                <li>スキル：Photoshop</li>
+              </ul>
+            </div><!--/graphic-item-->
+            
+             <div class="graphic-item">
+              <img src="images/mr_3.jpg" width="300" height="250" alt="ミディアムレクタングル入浴剤バナーC案">
+              <ul>
+                <li>入浴剤バナーC案</li>
+                <li>ミディアムレクタングル 300×250px</li>
+                <li>作業内容：撮影、デザイン</li>
+                <li>制作期間：5時間</li>
+                <li>スキル：Photoshop</li>
+              </ul>
+            </div><!--/graphic-item-->
+            
+            <div class="graphic-item">
+              <img src="images/lb_1.jpg" width="728" height="90" alt="リーダーボード入浴剤バナーA案">
+              <ul>
+                <li>入浴剤バナーA案</li>
+                <li>リーダーボード 728×90px</li>
+                <li>作業内容：撮影、デザイン</li>
+                <li>制作期間：5時間</li>
+                <li>スキル：Photoshop</li>
+              </ul>
+            </div><!--/graphic-item-->
+            
+          </div><!--/flex-->
+      </section><!--/graphic-wrap-->
+      
+      <section class="skill-wrap" id="sec3">
         <h2>Skill<span>現在できること</span></h2>
         <div class="flex">
           <div class="skill-item">
-            <div class="icon language"><i class="fab fa-html5 fa-6x"></i></div>
-            <h3>HTML5/CSS3</h3>
-            <p>2段組/3段組サイト・レスポンシブサイト・フォーム作成など</p>
+            <div class="icon language"><img src="images/icon-html.svg" width="67" height="65" alt="HTML5/CSS3"></div>
+            <div class="skill-text">
+              <h3>HTML5/CSS3</h3>
+              <p>2段組/3段組サイト・レスポンシブサイト・フォーム作成など</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
 
-          <div class="skill-item">
-            <div class="icon language"><i class="fab fa-js fa-6x"></i></div>
-            <h3>Javascript</h3>
-            <p>jQueryを使用したアニメーション（マウスオーバーでの画像エフェクト、フェードイン/フェードアウトのスライドショーなど）</p>
+          <div class="skill-item clearfix">
+            <div class="icon language"><i class="fab fa-js fa-5x"></i></div>
+            <div class="skill-text">
+              <h3>Javascript</h3>
+              <p>jQueryを使用したマウスオーバーでの画像エフェクト、フェードイン/フェードアウトのスライドショーなど（現在勉強中です。）</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
 
-          <div class="skill-item">
-            <div class="icon language"><i class="fab fa-php fa-6x"></i></div>
-            <h3>PHP</h3>
-            <p>お問い合わせフォーム・ログインフォーム</p>
+          <div class="skill-item clearfix">
+            <div class="icon language"><i class="fab fa-php fa-6x icon-size"></i></div>
+            <div class="skill-text">
+              <h3>PHP</h3>
+              <p>お問い合わせフォーム・ログインフォーム（現在勉強中です。）</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon tool"><img src="images/icon-xd.svg"></div>
-            <h3>XD</h3>
-            <p>ページ遷移・画像の書き出し・共有リンク作成など</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon other"><i class="fab fa-wordpress fa-6x icon-size"></i></div>
+            <div class="skill-text">
+              <h3>Wordpress</h3>
+              <p>システム導入・インターフェイスのカスタマイズ</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon tool"><img src="images/icon-dreamweaver.svg"></div>
-            <h3>Dreamweaver</h3>
-            <p>テンプレートを使った作業・FTP機能を使ったアップロードなど</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon other"><img src="images/icon-design.svg" width="67" height="65" alt="Webデザイン"></div>
+            <div class="skill-text">
+              <h3>Webデザイン</h3>
+              <p>デザインの4大原則「近接」「整列」「反復」「対比」とコーディングのしやすさを意識したデザイン作りなど</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon"><i class="fab fa-wordpress fa-6x"></i></div>
-            <h3>Wordpress</h3>
-            <p>システム導入・インターフェイスのカスタマイズ</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon tool"><img src="images/icon-xd.svg" width="67" height="65" alt="XD"></div>
+            <div class="skill-text">
+              <h3>XD</h3>
+              <p>ページ遷移・画像の書き出し・共有リンク作成など</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon"><i class="fab fa-wordpress fa-6x"></i></div>
-            <h3>Webデザイン</h3>
-            <p>ウェブページの作成に使用される言語です。</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon tool"><img src="images/icon-dreamweaver.svg" width="67" height="65" alt="Dreamweaver"></div>
+            <div class="skill-text">
+              <h3>Dreamweaver</h3>
+              <p>テンプレートを使った作業・FTP機能を使ったアップロードなど</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon tool"><img src="images/icon-illustrator.svg"></div>
-            <h3>Illustrator</h3>
-            <p>オブジェクト作成・クリピングマスク・整列・テキストデザインなど</p>
+
+
+          <div class="skill-item clearfix">
+            <div class="icon tool"><img src="images/icon-illustrator.svg" width="67" height="65" alt="Illustrator"></div>
+            <div class="skill-text">
+              <h3>Illustrator</h3>
+              <p>オブジェクト作成・クリピングマスク・整列・テキストデザインなど</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon tool"><img src="images/icon-photoshop.svg"></div>
-            <h3>Photoshop</h3>
-            <p>サイズ変更・トリミング・色調補正・合成など</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon tool"><img src="images/icon-photoshop.svg" width="67" height="65" alt="Photoshop"></div>
+            <div class="skill-text">
+              <h3>Photoshop</h3>
+              <p>サイズ変更・トリミング・色調補正・合成など</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon"><img src="images/icon-word.svg"></div>
-            <h3>Word</h3>
-            <p>ビジネス文書作成、罫線機能、図形描画など</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon office"><img src="images/icon-word.svg" width="67" height="65" alt="Word"></div>
+            <div class="skill-text">
+              <h3>Word</h3>
+              <p>ビジネス文書作成、罫線機能、図形描画など</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon"><img src="images/icon-excel.svg"></div>
-            <h3>Excel</h3>
-            <p>関数・グラフ作成・データの管理・テーブルの作成</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon office"><img src="images/icon-excel.svg" width="67" height="65" alt="Excel"></div>
+            <div class="skill-text">
+              <h3>Excel</h3>
+              <p>関数・グラフ作成・データの管理・テーブルの作成など</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          <div class="skill-item">
-            <div class="icon"><img src="images/icon-powerpoint.svg"></div>
-            <h3>PowerPoint</h3>
-            <p>プレゼンテーション資料作成、SmartArtグラッフィク作成など</p>
+
+          <div class="skill-item clearfix">
+            <div class="icon office"><img src="images/icon-powerpoint.svg" width="67" height="65" alt="PowerPoint"></div>
+            <div class="skill-text">
+              <h3>PowerPoint</h3>
+              <p>プレゼンテーション資料作成、SmartArtグラッフィク作成など</p>
+            </div><!--/skill-text-->
           </div><!--/skill-item-->
-          
-          
         </div><!--/flex-->
       </section><!--/skill-wrap-->
     </article>
     <footer>
-      <p><small>&copy; 2021 Kana Hasegawa.</small></p>
+      <p><small>&copy;2021 Kana Hasegawa.</small></p>
     </footer>
   </div><!--/wrapper-->
 </body></html>
