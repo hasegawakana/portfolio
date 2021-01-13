@@ -40,7 +40,7 @@
           closed: 'hidden.bs.dropdown'
         }
       };
-
+      
       __.settings.class = $.extend({
         nav: 'drawer-nav',
         toggle: 'drawer-toggle',
@@ -50,6 +50,8 @@
         dropdown: 'drawer-dropdown'
       }, options.class);
 
+      
+      
       return this.each(function instantiateDrawer() {
         var _this = this;
         var $this = $(this);
@@ -179,3 +181,4 @@
   };
 
 }));
+

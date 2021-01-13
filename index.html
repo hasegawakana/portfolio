@@ -20,8 +20,14 @@
   <script src="js/iscroll.js"></script>
   <script src="js/drawer.min.js"></script>
   <script>
-    $(document).ready(function() {
+    $(function() {
       $('.drawer').drawer();
+      $('.drawer-menu a').on('click', function() {
+        $('body').toggleClass("drawer-open");
+      });
+      $('.drawer-toggle,.drawer-hamburger').on('click',function(){
+        $('body').addClass("drawer-open");
+      });
     });
   </script>
 </head>

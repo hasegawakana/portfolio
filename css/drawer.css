@@ -539,14 +539,7 @@
   right: 0;
 }
 
-.drawer-hamburger {
-  margin-top: 15px;
-  background: #d1d1d1;
-}
 
-.drawer-hamburger:hover {
-  background-color: #464646;
-}
 
 .drawer-hamburger-icon, .drawer-hamburger-icon:before, .drawer-hamburger-icon:after {
     width: 100%;
@@ -554,6 +547,15 @@
     -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
     transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
     background-color: #fff;
+}
+
+.drawer-hamburger {
+  margin-top: 15px;
+  background: #d1d1d1;
+}
+
+.drawer-hamburger:hover {
+  background-color: #464646;
 }
 
 /* width=device-width
