@@ -12,7 +12,7 @@ body {
 --------------------------------------------------*/
 .wrapper {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   letter-spacing: 0.08em;
 }
@@ -73,7 +73,7 @@ nav ul a:hover::after {
 --------------------------------------------------*/
 .top-wrap {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom:  10%;
 }
 
 h1 {
@@ -92,7 +92,6 @@ h1 span {
   float: right;
   width: 80%;
   height: 400px;
-  margin-right: 2em;
 }
 
 .top-img img {
@@ -109,20 +108,20 @@ article {
 
 /* section
 --------------------------------------------------*/
-section:not(:last-child) {
-  margin-bottom: 100px;
+section{
+  margin-bottom:  10%;
 }
 
 h2 {
   font-size: 2em;
   border-bottom: 2px solid #d1d1d1;
-  margin-bottom: 2em;
+  margin-bottom: 5%;
   font-weight: normal;
 }
 
 h2 span {
-  font-size: 0.8em;
-  margin-left: 2em;
+  font-size: 0.6em;
+  margin-left: 3%;
 }
 
 /* about-wrap
@@ -142,17 +141,17 @@ h2 span {
 .about-img img {
   width: 50%;
   height: auto;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 0 0 25px #f3f1f1;
 }
 
 .about-text {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  align-items: center;
-  padding: 2.5em;
+  padding: 5%;
   background: #efefef;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 0 0 25px #f3f1f1;
+  font-size: 0.9em;
   line-height: 2em;
   text-align: justify;
 }
@@ -170,16 +169,16 @@ h2 span {
 .works-wrap .flex::after {
   display: block;
   content:"";
-  width: 30%;
+  width: 32%;
 }
 
 .works-item {
-  width: 28%;
-  margin: 1%;
+  width: 32%;
   height: 100%;
   padding: 2%;
+  margin-bottom: 5%;
   box-sizing: border-box;
-  box-shadow: 0 0 4px #ccc;
+  box-shadow: 0 0 25px #f3f1f1;
   overflow: hidden;
   border-radius: 3px;
   position: relative;
@@ -228,7 +227,6 @@ h2 span {
   font-size: 0.9em;
   font-weight: normal;
   padding-bottom: 1em;
-/*  transform: translate3d(0%, -100%, 0);*/
 }
 
 .works-item a {
@@ -246,8 +244,7 @@ h2 span {
 
 .works-item:hover .works-text h3,
 .works-item:hover .works-text p {
-  transform: translate3d(0%, 0%, 0);
-  transition: .8s;
+  transition: 0.8s;
   font-weight: bold;
 }
 
@@ -269,13 +266,13 @@ h2 span {
 
 .graphic-item {
   width: 32%;
-  margin-bottom: 2em;
   box-sizing: border-box;
-  box-shadow: 0 0 4px #ccc;
-  padding: 1em;
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 0 25px #f3f1f1;
+  padding: 2%;
+  margin-bottom: 5%;
+/*  overflow: hidden;*/
   border-radius: 3px;
+  position: relative;
 }
 
 .graphic-item:last-child {
@@ -286,8 +283,6 @@ h2 span {
   width: 100%;
   height: auto;
 }
-
-
 
 /* skill-wrap
 --------------------------------------------------*/
@@ -300,10 +295,10 @@ h2 span {
 
 .skill-item {
   width: 22%;
-  margin-bottom: 2em;
+  margin-bottom: 5%;
   box-sizing: border-box;
-  box-shadow: 0 0 4px #ccc;
-  padding: 1em 1.5em;
+  box-shadow: 0 0 25px #f3f1f1;
+  padding: 2%;
   border-radius: 3px;
   position: relative;
 }
@@ -320,10 +315,10 @@ i.icon-size {
 }
 
 .language:before {
-  content: "言語";
+  content: "language";
   color: #000;
   font-size: 0.6em;
-  padding: 0 1em;
+  padding: 0.2em 1em;
   background: rgb(255, 255, 44);
   position: absolute;
   top: 1em;
@@ -334,7 +329,7 @@ i.icon-size {
   content: "Adobe";
   color: #fff;
   font-size: 0.6em;
-  padding: 0 1em;
+  padding: 0.2em 1em;
   background: #ff1b43;
   position: absolute;
   top: 1em;
@@ -345,7 +340,7 @@ i.icon-size {
   content: "Office";
   color: #fff;
   font-size: 0.6em;
-  padding: 0 1em;
+  padding: 0.2em 1em;
   background: #4a3bff;
   position: absolute;
   top: 1em;
@@ -353,13 +348,13 @@ i.icon-size {
 }
 
 .other:before {
-  content: "その他";
+  content: "other";
   font-size: 0.6em;
-  padding: 0 1em;
+  padding: 0.2em 1em;
   border: 1px solid #000;
   position: absolute;
   top: 1em;
-  left: 2.2em;
+  left: 1.2em;
 }
 
 .skill-text {
@@ -369,14 +364,10 @@ i.icon-size {
 .skill-text h3 {
   font-size: 1em;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 10%;
   font-weight: normal;
   width: 100%;
   word-wrap: break-word;
-}
-
-.skill-text p span {
-  padding-bottom: 30px;
 }
 
 .skill-text p {
@@ -397,16 +388,24 @@ footer p {
 /* width=device-width
 --------------------------------------------------*/
 @media screen and (max-width: 480px) {
-  
+  .wrapper {
+    width: 95%;
+  }
   .name {
     width: auto;
     float: none;
   }
-
+  
   .name a {
     font-size: 18px;
     line-height: 90px;
   }
+  
+  .top-img {
+    width: auto;
+    float: none;
+  }
+  
   
   .top-wrap {
     margin-bottom: 50px;
@@ -422,6 +421,10 @@ footer p {
   h2 {
     font-size: 18px;
     margin-bottom: 20px;
+  }
+  
+  h2 span {
+    font-size: 14px;
   }
 
   article {
@@ -467,10 +470,14 @@ footer p {
   .skill-item {
     display: flex;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px 0 10px 20px;
   }
-
+  
+  i.fa-js{
+    font-size: 4em;
+  }
+  
   .language:before {
     top: 5px;
     left: 5px;
@@ -496,7 +503,7 @@ footer p {
   }
 
   i.icon-size {
-    font-size: 62px;
+    font-size: 55px;
   }
 
 }
