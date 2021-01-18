@@ -8,8 +8,7 @@
   <title>Kana Hasegawa｜portfolio</title>
   <meta name="description" content="はせがわかなのポートフォリオサイトです。">
   <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="images/#">
-  <!--↑スマホ用お気に入りページ用のアイコン-->
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-152x152.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/drawer.css">
@@ -22,11 +21,11 @@
   <script>
     $(function() {
       $('.drawer').drawer();
-      $('.drawer-menu a').on('click', function() {
-        $('body').toggleClass("drawer-open");
-      });
-      $('.drawer-toggle,.drawer-hamburger').on('click',function(){
-        $('body').addClass("drawer-open");
+      
+      $('.drawer').on('drawer.opened', function() {
+        $('.drawer-menu a').on('click', function() {
+          $('.drawer').drawer('close');
+        });
       });
     });
   </script>
@@ -41,7 +40,7 @@
       <div class="name">
         <p><a href="#top">Kana Hasegawa</a></p>
       </div><!--/name-->
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
           <li><a href="#sec1">About</a></li>
           <li><a href="#sec2">Works</a></li>
