@@ -539,9 +539,6 @@
   right: 0;
 }
 
-.drawer--right.drawer-open .drawer-nav, .drawer--right .drawer-hamburger, .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
-  right: 2.5%;
-}
 
 
 .drawer-hamburger-icon, .drawer-hamburger-icon:before, .drawer-hamburger-icon:after {
@@ -563,10 +560,11 @@
 
 /* width=device-width
 --------------------------------------------------*/
-
-
 @media screen and (max-width: 480px) {
   
+    .drawer--right.drawer-open .drawer-nav, .drawer--right .drawer-hamburger, .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
+    right: 2.5%;
+}
   .drawer-hamburger {
     margin-top: 5px;
 }
