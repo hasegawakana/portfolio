@@ -561,6 +561,10 @@
   background-color: #464646;
 }
 
+.drawer--right.drawer-open .drawer-hamburger {
+    right: 17.25rem;
+}
+
 /* width=device-width
 --------------------------------------------------*/
 
@@ -568,6 +572,9 @@
 @media screen and (max-width: 480px) {
   
   .drawer-hamburger {
-    margin-top: 5px;
+    margin-top: 14px;
+}
+  .drawer--right.drawer-open .drawer-hamburger {
+    right: 16.25rem;
 }
 }

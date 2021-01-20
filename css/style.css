@@ -19,11 +19,6 @@ header {
   height: 90px;
 }
 
-.name {
-  width: 50%;
-  float: left;
-}
-
 .name a {
   color: #000;
   font-size: 2em;
@@ -51,7 +46,7 @@ nav ul a::after {
   content: "";
   width: 100%;
   height: 2px;
-  background: rgba(107, 97, 183, 0.7);
+  background: #242c4d;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.5s;
@@ -83,7 +78,7 @@ h1 {
 
 h1 span {
   color: #000;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 4px 5px rgb(123 121 121 / 10%);
 }
 
 .top-img {
@@ -112,9 +107,10 @@ section{
 
 h2 {
   font-size: 2em;
-  border-bottom: 2px solid #d1d1d1;
-  padding-top: 3%;
+  border-bottom: 5px dotted #d1d1d1;
   margin-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 1%;
   font-weight: normal;
 }
 
@@ -138,7 +134,7 @@ h2 span {
 }
 
 .about-img img {
-  width: 50%;
+  width: 60%;
   height: auto;
   box-shadow: 0 0 25px #f3f1f1;
 }
@@ -348,6 +344,35 @@ i.icon-size {
   line-height: 1.4em;
 }
 
+/*  contact-wrap
+--------------------------------------------------*/
+.contact-item {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-item h3{
+  font-weight: normal;
+  margin: 10% 0;
+}
+
+.gmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gmail a {
+  display: block;
+  margin: 10% 0;
+  margin-left: 1em;
+  color: #000;
+}
+
+.gmail a:hover{
+  color: rgb(0, 0, 238);
+}
 
 /* footer
 --------------------------------------------------*/
@@ -366,7 +391,7 @@ footer p {
   position: fixed;
   right: 10px;
   bottom: 20px;
-  background: rgba(107, 97, 183, 0.7);
+  background: #d1d1d1;
   border-radius: 50%;
 }
 
@@ -397,7 +422,7 @@ footer p {
 #page_top a::after{
   content: 'PAGE TOP';
   font-size: 0.3em;
-  color: #fff;
+  color: #000;
   position: absolute;
   top: 35px;
   bottom: 0;
@@ -409,17 +434,21 @@ footer p {
 
 /* width=device-width
 --------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  
+  
+}
+/* width=device-width
+--------------------------------------------------*/
 @media screen and (max-width: 480px) {
   .wrapper {
     width: 95%;
   }
-  .name {
-    width: auto;
-    float: none;
+  header {
+    padding-left: 1em;
   }
-  
   .name a {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 90px;
   }
   
@@ -429,18 +458,18 @@ footer p {
   }
   
   .top-wrap {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     margin-bottom: 50px;
-  }
-
+}
+  
   h1 {
     text-align: center;
     width: 100%;
     margin: 0;
     top: 35%;
-  }
-  
-  h1 span {
-    text-shadow: 0px 4px 5px rgba(255, 255, 255, 0.1)
   }
   
   h2 {
@@ -531,5 +560,22 @@ footer p {
   i.icon-size {
     font-size: 55px;
   }
+  
+  .contact-item {
+    width: 100%;
+}
+  
+.contact-item h3{
+  font-size: 16px;
+  margin: 30% 0;
+}
 
+.gmail {
+  flex-direction: column;
+}
+
+.gmail a {
+  margin: 20% 0;
+  margin-left: 0;
+}
 }
