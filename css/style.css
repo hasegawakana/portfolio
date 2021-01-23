@@ -27,20 +27,24 @@ header {
 }
 
 nav ul li {
-  line-height: 70px;
+  line-height: 60px;
   margin-left: 10%;
+}
+
+nav ul li:first-child {
+  margin-top: 14px;
 }
 
 nav ul li a {
   font-size: 1em;
   color: #000;
-  padding: 10px;
+  padding: 10px 0;
   position: relative;
 }
 
 nav ul a::after {
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   display: block;
   content: "";
@@ -361,6 +365,10 @@ i.icon-size {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contact-item img {
+  border-radius: 50%;
 }
 
 .gmail a {
