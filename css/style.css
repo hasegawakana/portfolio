@@ -50,7 +50,7 @@ nav ul a::after {
   content: "";
   width: 100%;
   height: 2px;
-  background: #242c4d;
+  background: #d1d1d1;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.5s;
