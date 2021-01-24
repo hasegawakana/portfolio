@@ -164,6 +164,7 @@ h2 span {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font-size: 1em;
 }
 
 .works-item,.graphic-item {
@@ -191,7 +192,6 @@ h2 span {
 }
 
 .works-wrap ul {
-  font-size: 0.9em;
   display: flex;
   flex-direction: column;
 }
@@ -203,7 +203,6 @@ h2 span {
   width: 100%;
   height: 50%;
   padding-top: 10%;
-  font-size: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -452,16 +451,19 @@ footer p {
   .wrapper {
     width: 95%;
   }
-  header {
-    padding-left: 1em;
+  
+  header,
+  .name {
+    height: 12vh;
   }
+  
   .name a {
-    font-size: 22px;
-    line-height: 90px;
+    font-size: 20px;
   }
   
   .top-img {
     width: auto;
+    height: 88vh;
     float: none;
   }
   
@@ -470,14 +472,13 @@ footer p {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 50px;
-}
+  }
   
   h1 {
     text-align: center;
     width: 100%;
     margin: 0;
-    top: 35%;
+    top: 40%;
   }
   
   h2 {
@@ -485,10 +486,6 @@ footer p {
     padding: 20px 0;
   }
   
-  h2 span {
-    font-size: 14px;
-  }
-
   article {
     margin: 0 15px;
   }
@@ -496,11 +493,7 @@ footer p {
   section {
     margin-bottom: 50px;
   }
-
-  .about-wrap .flex {
-    display: block;
-  }
-
+  
   .about-img {
     margin: 20px;
     width: auto;
@@ -515,12 +508,12 @@ footer p {
   .works-wrap .flex,
   .graphic-wrap .flex,
   .skill-wrap .flex {
-    display: block;
+    font-size: 14px;
   }
 
   .works-item,
   .graphic-item {
-    width: 100%;
+    width: 50%;
     padding: 0;
     margin: 0;
     margin-bottom: 30px;
@@ -571,19 +564,19 @@ footer p {
   
   .contact-item {
     width: 100%;
-}
+  }
   
-.contact-item h3{
-  font-size: 16px;
-  margin: 30% 0;
-}
+  .contact-item h3{
+    font-size: 16px;
+    margin: 30% 0;
+  }
 
-.gmail {
-  flex-direction: column;
-}
+  .gmail {
+    flex-direction: column;
+  }
 
-.gmail a {
-  margin: 20% 0;
-  margin-left: 0;
-}
+  .gmail a {
+    margin: 20% 0;
+    margin-left: 0;
+  }
 }
