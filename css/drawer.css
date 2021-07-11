@@ -552,6 +552,7 @@
 .drawer-hamburger {
   margin-top: 15px;
   background: #d1d1d1;
+/*  margin-right: 10px;*/
 }
 
 .drawer-hamburger:hover {

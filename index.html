@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Kana Hasegawa｜portfolio</title>
+  <title>Hasegawa Kana｜portfolio</title>
   <meta name="description" content="はせがわかなのポートフォリオサイトです。">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="images/#">
@@ -22,11 +21,38 @@
   <script>
     $(function() {
       $('.drawer').drawer();
+<<<<<<< Updated upstream
       $('.drawer-menu a').on('click', function() {
         $('body').toggleClass("drawer-open");
       });
       $('.drawer-toggle,.drawer-hamburger').on('click',function(){
         $('body').addClass("drawer-open");
+=======
+      $('.drawer').on('drawer.opened', function() {
+        $('.drawer-menu a').on('click', function() {
+          $('.drawer').drawer('close');
+        });
+      });
+    });
+  </script>
+  <script>
+    $(function() {
+      var pagetop = $('#page_top');
+      pagetop.hide();
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 100 ) {
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        }
+      });
+      $('a[href^="#"]').click(function(){
+        var href = $(this).attr('href');
+        var target = $(href == "#" ? 'html' : href );
+        var distance = target.offset().top;
+        $('html,body').animate({ scrollTop:distance }, 1000, 'swing');
+        return false;
+>>>>>>> Stashed changes
       });
     });
   </script>
@@ -39,7 +65,7 @@
   <div class="wrapper clearfix">
     <header>
       <div class="name">
-        <p><a href="#top">Kana Hasegawa</a></p>
+        <p><a href="#top">Hasegawa Kana</a></p>
       </div><!--/name-->
       <nav class="drawer-nav">
         <ul class="drawer-menu">
@@ -79,7 +105,6 @@
                 <li>スキル：HTML、CSS、JavaScript（jQuery）</li>
               </ul>
             </div><!--/works-item-->
-
 
             <div class="works-item">
               <p class="works-img"><img src="images/works-sd.png" width="338" height="237" alt="架空サンドイッチ店のサイトSandwich Day"></p>
@@ -132,7 +157,6 @@
                 <li>スキル：HTML、CSS、PHP</li>
               </ul>
             </div><!--/works-item-->
-
           </div><!--/flex-->
       </section><!--/works-wrap-->
       
@@ -149,7 +173,7 @@
                 <li>スキル：Photoshop</li>
               </ul>
             </div><!--/graphic-item-->
-            
+
             <div class="graphic-item">
               <img src="images/mr_2.jpg" width="300" height="250" alt="ミディアムレクタングル入浴剤バナーB案">
               <ul>
@@ -245,8 +269,12 @@
             </div><!--/skill-text-->
           </div><!--/skill-item-->
 
+<<<<<<< Updated upstream
 
           <div class="skill-item clearfix">
+=======
+          <div class="skill-item">
+>>>>>>> Stashed changes
             <div class="icon tool"><img src="images/icon-illustrator.svg" width="67" height="65" alt="Illustrator"></div>
             <div class="skill-text">
               <h3>Illustrator</h3>
@@ -287,7 +315,22 @@
           </div><!--/skill-item-->
         </div><!--/flex-->
       </section><!--/skill-wrap-->
+<<<<<<< Updated upstream
+=======
+
+      <section class="contact-wrap" id="sec5">
+        <h2>Contact<span>| お問い合わせ</span></h2>
+        <div class="contact-item">
+          <h3>ご質問等お気軽にお問い合せください。</h3>
+          <div class="gmail">
+            <p><img src="images/apple-touch-icon.png" width="100" height="100" alt="gmailへのリンクです。"></p>
+            <p><a href="mailto:k.hasegawa0407@gmail.com">k.hasegawa0407@gmail.com</a></p>
+          </div><!--/gmail-->
+        </div><!--/contact-item-->
+      </section><!--/contact-wrap-->
+>>>>>>> Stashed changes
     </article>
+    
     <footer>
       <p><small>&copy;2021 Kana Hasegawa.</small></p>
     </footer>

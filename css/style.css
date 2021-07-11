@@ -1,4 +1,4 @@
-@charset="utf-8";
+@charset "utf-8";
 
 html {
   scroll-behavior: smooth;
@@ -391,6 +391,7 @@ footer p {
   .wrapper {
     width: 95%;
   }
+<<<<<<< Updated upstream
   .name {
     width: auto;
     float: none;
@@ -399,10 +400,20 @@ footer p {
   .name a {
     font-size: 18px;
     line-height: 90px;
+=======
+  
+  .name a {
+    line-height: 90px;
+    font-size: 20px;
+>>>>>>> Stashed changes
   }
   
   .top-img {
     width: auto;
+<<<<<<< Updated upstream
+=======
+    height: 80vh;
+>>>>>>> Stashed changes
     float: none;
   }
   
@@ -454,15 +465,23 @@ footer p {
   .graphic-wrap .flex {
     display: block;
   }
-
+  
   .works-item,
   .graphic-item {
+<<<<<<< Updated upstream
     padding: 0;
     width: 100%;
     margin-bottom: 10px;
     padding: 1em;
+=======
+    width: 47%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 3%;
+>>>>>>> Stashed changes
   }
-
+  
   .graphic-item:last-child {
     width: auto;
   }
@@ -505,5 +524,21 @@ footer p {
   i.icon-size {
     font-size: 55px;
   }
+<<<<<<< Updated upstream
+=======
+  
+  .contact-item {
+    width: 100%;
+  }
+  
+  .contact-item h3{
+    font-size: 16px;
+    margin: 10vw 0;
+  }
+
+  .gmail {
+    flex-direction: column;
+  }
+>>>>>>> Stashed changes
 
 }
