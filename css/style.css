@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Playfair Display', serif;
 }
@@ -23,11 +19,6 @@ header {
   height: 90px;
 }
 
-.name {
-  width: 50%;
-  float: left;
-}
-
 .name a {
   color: #000;
   font-size: 2em;
@@ -35,45 +26,50 @@ header {
   font-weight: bold;
 }
 
-nav ul {
-  line-height: 90px;
+nav ul li {
+  line-height: 60px;
+  margin-left: 10%;
 }
 
-nav ul li {
-  margin-left: 10%;
+nav ul li:first-child {
+  margin-top: 14px;
 }
 
 nav ul li a {
   font-size: 1em;
   color: #000;
-  padding: 10px;
+  padding: 10px 0;
   position: relative;
 }
 
 nav ul a::after {
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   display: block;
   content: "";
   width: 100%;
   height: 2px;
-  background: #04ac0a;
+  background: #d1d1d1;
   transform: scaleX(0);
-  transform-origin: right top;
-  transition: transform 0.3s;
+  transform-origin: center;
+  transition: transform 0.5s;
 }
 
 nav ul a:hover::after {
   transform: scaleX(1);
-  transform-origin: left top;
+  transform-origin: center;
+}
+
+.fa-external-link-alt {
+  margin-left: 3%;
 }
 
 /* top-wrap
 --------------------------------------------------*/
 .top-wrap {
   position: relative;
-  margin-bottom:  10%;
+  margin-bottom: 10%;
 }
 
 h1 {
@@ -86,6 +82,7 @@ h1 {
 
 h1 span {
   color: #000;
+  text-shadow: 0px 4px 5px rgb(123 121 121 / 10%);
 }
 
 .top-img {
@@ -114,8 +111,10 @@ section{
 
 h2 {
   font-size: 2em;
-  border-bottom: 2px solid #d1d1d1;
+  border-bottom: 5px dotted #d1d1d1;
   margin-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 1%;
   font-weight: normal;
 }
 
@@ -128,7 +127,7 @@ h2 span {
 --------------------------------------------------*/
 .about-wrap .flex {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .about-img {
@@ -139,7 +138,7 @@ h2 span {
 }
 
 .about-img img {
-  width: 50%;
+  width: 60%;
   height: auto;
   box-shadow: 0 0 25px #f3f1f1;
 }
@@ -156,52 +155,45 @@ h2 span {
   text-align: justify;
 }
 
-/* works-wrap
+
+/* flex common
 --------------------------------------------------*/
-.works-wrap .flex {
+.works-wrap .flex,
+.graphic-wrap .flex,
+.skill-wrap .flex {
   display: flex;
   flex-wrap: wrap;
-  align-content: stretch;
   justify-content: space-between;
-  width: 100%;
+  font-size: 1em;
 }
 
+.works-item,.graphic-item {
+  width: 32%;
+  box-sizing: border-box;
+  box-shadow: 0 0 25px #f3f1f1;
+  padding: 2%;
+  margin-bottom: 5%;
+  border-radius: 3px;
+  position: relative;
+}
+
+/* works-wrap
+--------------------------------------------------*/
 .works-wrap .flex::after {
   display: block;
   content:"";
   width: 32%;
 }
 
-.works-item {
-  width: 32%;
-  height: 100%;
-  padding: 2%;
-  margin-bottom: 5%;
-  box-sizing: border-box;
-  box-shadow: 0 0 25px #f3f1f1;
-  overflow: hidden;
-  border-radius: 3px;
-  position: relative;
-}
-
-.worls-item:last-child{
-  margin-left: auto;
-}
-
-.works-img {
-  width: auto;
-  height: 100%;
-  margin-bottom: 5%;
-}
-
 .works-img img {
+  margin-bottom: 5%;
   width: 100%;
   height: auto;
 }
 
 .works-wrap ul {
-  font-size: 0.9em;
-  height: 70px;
+  display: flex;
+  flex-direction: column;
 }
 
 .works-text {
@@ -211,7 +203,6 @@ h2 span {
   width: 100%;
   height: 50%;
   padding-top: 10%;
-  font-size: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -226,7 +217,7 @@ h2 span {
 .works-text h3 {
   font-size: 0.9em;
   font-weight: normal;
-  padding-bottom: 1em;
+  padding-bottom: 3%;
 }
 
 .works-item a {
@@ -258,23 +249,6 @@ h2 span {
 
 /* graphic-wrap
 --------------------------------------------------*/
-.graphic-wrap .flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.graphic-item {
-  width: 32%;
-  box-sizing: border-box;
-  box-shadow: 0 0 25px #f3f1f1;
-  padding: 2%;
-  margin-bottom: 5%;
-/*  overflow: hidden;*/
-  border-radius: 3px;
-  position: relative;
-}
-
 .graphic-item:last-child {
   width: 50%;
 }
@@ -286,13 +260,6 @@ h2 span {
 
 /* skill-wrap
 --------------------------------------------------*/
-.skill-wrap .flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
 .skill-item {
   width: 22%;
   margin-bottom: 5%;
@@ -301,6 +268,11 @@ h2 span {
   padding: 2%;
   border-radius: 3px;
   position: relative;
+}
+
+.skill-item:hover .skill-text p{
+  transform:scale(1.1,1.1);
+  transition: all 0.5s ease-out;
 }
 
 .icon {
@@ -375,6 +347,39 @@ i.icon-size {
   line-height: 1.4em;
 }
 
+/*  contact-wrap
+--------------------------------------------------*/
+.contact-item {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-item h3{
+  font-weight: normal;
+  margin: 10% 0;
+}
+
+.gmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item img {
+  border-radius: 50%;
+}
+
+.gmail a {
+  display: block;
+  margin: 10% 0;
+  margin-left: 1em;
+  color: #000;
+}
+
+.gmail a:hover{
+  color: rgb(0, 0, 238);
+}
 
 /* footer
 --------------------------------------------------*/
@@ -385,59 +390,98 @@ footer p {
   padding-bottom: 5%;
 }
 
+/* page_top
+--------------------------------------------------*/
+#page_top{
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background: #d1d1d1;
+  border-radius: 50%;
+}
+
+#page_top a{
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
+  content: '\f102';
+  font-size: 1.5em;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -35px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+#page_top a::after{
+  content: 'PAGE TOP';
+  font-size: 0.3em;
+  color: #000;
+  position: absolute;
+  top: 35px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/* width=device-width
+--------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  
+  
+}
 /* width=device-width
 --------------------------------------------------*/
 @media screen and (max-width: 480px) {
   .wrapper {
     width: 95%;
   }
-<<<<<<< Updated upstream
-  .name {
-    width: auto;
-    float: none;
-  }
   
   .name a {
+
     font-size: 18px;
     line-height: 90px;
-=======
-  
-  .name a {
-    line-height: 90px;
-    font-size: 20px;
->>>>>>> Stashed changes
   }
   
   .top-img {
     width: auto;
-<<<<<<< Updated upstream
-=======
-    height: 80vh;
->>>>>>> Stashed changes
     float: none;
   }
   
-  
   .top-wrap {
-    margin-bottom: 50px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
-
+  
   h1 {
     text-align: center;
     width: 100%;
     margin: 0;
-    top: 35%;
-  }
-
-  h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
+    top: 40%;
   }
   
-  h2 span {
-    font-size: 14px;
+  h2 {
+    font-size: 22px;
+    padding: 20px 0;
   }
-
+  
   article {
     margin: 0 15px;
   }
@@ -445,41 +489,32 @@ footer p {
   section {
     margin-bottom: 50px;
   }
-
-  .about-wrap .flex {
-    display: block;
-  }
-
+  
   .about-img {
     margin: 20px;
     width: auto;
   }
 
   .about-text {
-    padding: 10px 20px;
+    padding: 40px;
     font-size: 14px;
     line-height: 24px;;
   }
 
   .works-wrap .flex,
-  .graphic-wrap .flex {
-    display: block;
+  .graphic-wrap .flex,
+  .skill-wrap .flex {
+    font-size: 14px;
   }
   
   .works-item,
   .graphic-item {
-<<<<<<< Updated upstream
-    padding: 0;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 1em;
-=======
     width: 47%;
     padding: 0;
     margin: 0;
     margin-bottom: 20px;
     padding: 3%;
->>>>>>> Stashed changes
+
   }
   
   .graphic-item:last-child {
@@ -489,8 +524,7 @@ footer p {
   .skill-item {
     display: flex;
     width: 100%;
-    margin-bottom: 15px;
-    padding: 10px 0 10px 20px;
+    padding: 10px 10px 10px 20px;
   }
   
   i.fa-js{
@@ -524,8 +558,6 @@ footer p {
   i.icon-size {
     font-size: 55px;
   }
-<<<<<<< Updated upstream
-=======
   
   .contact-item {
     width: 100%;
@@ -533,12 +565,14 @@ footer p {
   
   .contact-item h3{
     font-size: 16px;
-    margin: 10vw 0;
   }
 
   .gmail {
     flex-direction: column;
   }
->>>>>>> Stashed changes
 
+  .gmail a {
+    margin: 20% 0;
+    margin-left: 0;
+  }
 }
